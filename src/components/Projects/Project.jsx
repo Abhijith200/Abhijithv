@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Project.module.css";
 import projects from "../../data/projects.json";
-import {ProjectCard} from "./ProjectCard";
+import Projectcard from "./Projectcard";
 
-export const Project = () => {
+const Project = () => {
     return (
         <section className={styles.container} id="projects">
             <h2 className={styles.title}>Projects</h2>
@@ -11,7 +11,7 @@ export const Project = () => {
                 {
                     projects.map((project, id) => {
                         return (
-                            <ProjectCard key={id} project={project} />
+                            <Projectcard key={id} project={project} />
                         );
                     })
                 }
@@ -19,3 +19,5 @@ export const Project = () => {
         </section>
     )
 };
+
+export default Project;
